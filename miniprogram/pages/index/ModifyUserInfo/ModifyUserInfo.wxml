@@ -1,0 +1,18 @@
+<!--ModifyInfo.wxml-->
+<view class="container">
+
+<!-- 用户 openid -->
+<view class="userinfo">
+  <!-- 用户授权获取用户个人信息,用户为授权是点击才会弹出 -->
+  <button 
+    bindtap="updateAvatarUrl"
+    class="userinfo-avatar"
+    style="background-image: url({{userInfo.avatarUrl}})"
+    size="default"
+  ></button> 
+</view>
+<input class="weui-input" placeholder="{{userInfo.nickName}}" confirm-type="done" bindinput="updateNickName"/>
+<input class="weui-input" placeholder="{{content}}" confirm-type="done" bindinput="updateContent"/>
+
+<!-- <image src="{{userInfo.avatarUrl}}" mode="aspectFit"></image> -->
+</view>
