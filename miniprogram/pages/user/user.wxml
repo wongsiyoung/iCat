@@ -20,7 +20,7 @@
 
   <!-- 跳转到新的页面填写用户信息(新增页面记得要在 app.json 新增) -->
   <view class="uploader">
-    <navigator url="./ModifyUserInfo/ModifyUserInfo?nickName={{userInfo.nickName}}&avatarUrl={{userInfo.avatarUrl}}&content={{content}}" open-type="navigate" class="uploader-text">
+    <navigator url="./modifyUserInfo/modifyUserInfo?nickName={{userInfo.nickName}}&avatarUrl={{userInfo.avatarUrl}}&content={{content}}" open-type="navigate" class="uploader-text">
       <text>修改用户信息</text>
     </navigator>
   </view>
