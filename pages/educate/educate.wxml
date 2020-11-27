@@ -1,0 +1,21 @@
+
+  <view class="container">
+    <view class="feed-item">
+            <view class="feed-source">        
+                    <image  src="../../images/educate1.jpg"></image>   
+           </view>
+            <view class="feed-source">        
+                    <image  src="../../images/educate2.jpg"></image>    
+            </view>
+            <view class="feed-source">        
+                    <image src="../../images/educate3.jpg"></image>    
+            </view>
+            <view class="feed-source">        
+                    <image  src="../../images/educate4.jpg"></image>    
+            </view>
+            <view class="feed-source">        
+                    <image  src="../../images/educate5.jpg"></image>    
+            </view>
+  </view>
+</view>
+
