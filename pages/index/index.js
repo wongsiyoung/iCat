@@ -18,6 +18,8 @@ Page({
       url: '../question/question'
     })
   },
+  /* 可删？ */
+  
   onLoad: function () {
     console.log('onLoad')
     var that = this

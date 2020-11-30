@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+    <!-- 搜索框 -->
   <view class="search flex-wrp">
       <view class="search-left flex-item">
           <image src="../../images/搜索.png"></image>
@@ -10,6 +12,7 @@
       </view>
   </view>
 
+    <!-- 猫信息 -->
     <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
         <view class="feed-item">
             <view class="feed-source">

@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/user/user",
+    "pages/user/modifyUserInfo/modifyUserInfo",
     "pages/index/index",
     "pages/discovery/discovery",
-    "pages/educate/educate",
-    "pages/more/more"
+    "pages/educate/educate"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,7 +38,7 @@
         "selectedIconPath": "images/猫爪.png"
       },
       {
-        "pagePath": "pages/more/more",
+        "pagePath": "pages/user/user",
         "text": "用户",
         "iconPath": "images/用户.png",
         "selectedIconPath": "images/猫爪.png"
