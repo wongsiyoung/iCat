@@ -9,15 +9,27 @@
     
 |--miniprogram 小程序端
 
-    |-- chooseLib 版本提示页面
+    |-- data 暂存数据
+
+    |-- image 静态页面图像
 
     |-- pages 小程序页面
     
-        |-- index 小程序首页，显示个人用户信息
+        |-- chooseLib 版本提示页面
+
+        |-- user 小程序首页，显示个人用户信息
         
-            |-- ModifyUserInfo 修改用户个人信息页面
+            |-- modifyUserInfo 修改用户个人信息页面
+        
+        |-- discovery 喵圈页面
+
+        |-- educate 科普页面
+
+        |-- index 猫谱页面
     
     |-- style 全局样式
+
+    |-- utils 小工具
 
     |-- app.js 
     

@@ -1,0 +1,129 @@
+.activity{/*每一个活动栏*/
+  width: 750rpx;
+  left: 0;
+  height: 300rpx;
+}
+.activity image{/*每一个活动栏图片*/
+  width: 750rpx;
+  left: 0;
+  height: 400rpx;
+}
+
+.container{
+  height: 1500rpx;
+  padding: 0;
+  font-size: 14rpx;/*字体大小*/
+  background: #DB7093;
+  color: #000;
+}
+
+.container .feed-item{
+  width: 750rpx;
+  background:  #ffffff;
+  border-top: 1px solid #FFC0CB;/*上边框*/
+  border-bottom: 1px solid #FFC0CB;/*下边框*/
+  box-shadow: 0 2px 5px #eeeeee;
+}
+
+.container .feed-item .feed-source{/*每一个用户发布消息栏*/
+  width: 690rpx;
+  left: 0;
+  height: 600rpx;
+  position: relative;
+}
+.container .feed-item .feed-source .avatar{
+  /* position: relative; */
+  display: inline-block;
+}
+.container .feed-item .feed-source .avatar image{/*每一个用户头像*/
+  position: absolute;
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 45rpx;/*圆角*/
+  /*top: 10rpx;*/
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+
+.container .feed-item .feed-source .usr-name{/*每一个用户名*/
+  position: absolute;
+  display: inline-block;
+  font-size: 24rpx;
+  left: 120rpx;
+  top: 50rpx;
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+
+.container .feed-item .feed-source .focus{
+  position: absolute;
+  display: inline-block;
+}
+.container .feed-item .feed-source .focus image{/*关注*/
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+  position: absolute;
+  display: inline-block;
+  top: 30rpx;
+  left: 650rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.container .feed-item .feed-source .cat-img{
+  /* position: relative; */
+  display: inline-block;
+}
+.container .feed-item .feed-source .cat-img image{/*每一个猫图*/
+  position: absolute;
+  display: inline-block;
+  width: 670rpx;
+  height: 400rpx;
+  top: 130rpx;
+  left: 40rpx;
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+
+.container .feed-item .feed-source .thumbsup{
+  /* position: relative; */
+  display: inline-block;
+}
+.container .feed-item .feed-source .thumbsup image{/*点赞图标*/
+  position: absolute;
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  top: 530rpx;
+  left: 510rpx;
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+
+.container .feed-item .feed-source .comment{
+  /* position: relative; */
+  display: inline-block;
+}
+.container .feed-item .feed-source .comment image{/*评论图标*/
+  position: absolute;
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  top: 540rpx;
+  left: 585rpx;
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+
+.container .feed-item .feed-source .share{
+  /* position: relative; */
+  display: inline-block;
+}
+.container .feed-item .feed-source .share image{/*分享图标*/
+  position: absolute;
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  top: 540rpx;
+  left: 660rpx;
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+
+

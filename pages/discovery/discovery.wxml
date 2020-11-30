@@ -1,0 +1,50 @@
+<scroll-view scroll-y="true" class="container feed-item" bindscrolltoupper="upper" upper-threshold="10"
+  lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+  <swiper class="activity" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+    duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item">
+      <view class="feed-source">
+        <view class="avatar">
+          <image src="{{item.usr_img}}"></image>
+        </view>
+        <a class="usr-name">
+          <text>{{item.usr_name}}</text>
+        </a>
+        <view class="focus">
+          <image src="../../images/加关注.png"></image>
+        </view>
+        <view class="cat-img">
+          <image src="{{item.cat_img}}"></image>
+        </view>
+        <view class="thumbsup">
+          <image src="../../images/点赞.png"></image>
+        </view>
+        <view class="comment">
+          <image src="../../images/评论.png"></image>
+        </view>
+        <view class="share">
+          <image src="../../images/分享.png"></image>
+        </view>
+
+
+
+
+      </view>
+
+
+
+
+    </view>
+  </block>
+
+
+</scroll-view>
