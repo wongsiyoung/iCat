@@ -11,8 +11,13 @@
     size="default"
   ></button> 
 </view>
-<input class="weui-input" placeholder="{{userInfo.nickName}}" confirm-type="done" bindinput="updateNickName"/>
-<input class="weui-input" placeholder="{{content}}" confirm-type="done" bindinput="updateContent"/>
-
+<view  class="input-mes">
+  <text class="nickname-title">昵 称 : </text>
+<input class="nickname-input" placeholder="{{userInfo.nickName}}" confirm-type="done" bindinput="updateNickName"/>
+</view>
+<view  class="input-mes-1">
+  <text class="introduction-title">个性签名 : </text>
+<input class="introduction-input" placeholder="{{content}}" confirm-type="done" bindinput="updateContent"/>
+</view>
 <!-- <image src="{{userInfo.avatarUrl}}" mode="aspectFit"></image> -->
 </view>

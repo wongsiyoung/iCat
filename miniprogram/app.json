@@ -8,14 +8,14 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#DB7093",
+    "navigationBarBackgroundColor": "#FA8D6F",
     "navigationBarTitleText": "iCat",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#626567",
-    "selectedColor": "#DB7093",
+    "selectedColor": "#F89B9B",
     "backgroundColor": "#FBFBFB",
     "borderStyle": "white",
     "list": [

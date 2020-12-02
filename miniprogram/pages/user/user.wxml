@@ -1,27 +1,44 @@
-<!--index.wxml-->
+<!--user.wxml-->
 <view class="container">
 
   <!-- 用户 openid -->
   <view class="userinfo">
     <!-- 用户授权获取用户个人信息,用户为授权是点击才会弹出 -->
     <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
       style="background-image: url({{userInfo.avatarUrl}})"
       size="default"
-    >{{userInfo.nickName}}</button> 
+    ></button>
     <!-- 用户未登录时点击则是调用 onGetUserInfo 注册，已注册时点击则是到新的页面，修改个人信息(下面的url) -->
-    <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" >{{content}}</button>
+  <view class="userinfo-flex">
+    <view wx:if="{{logged == false? 1:0}}" hover-class="name-hover">
+          <button 
+          class="userinfo-nickname" 
+          open-type="getUserInfo" 
+          bindgetuserinfo="onGetUserInfo">
+          {{userInfo.nickName}}
+          </button>
     </view>
+
+    <view wx:if="{{logged == true? 1:0}}">
+        <!-- 跳转到新的页面填写用户信息(新增页面记得要在 app.json 新增) -->
+        <navigator url="./modifyUserInfo/modifyUserInfo?nickName={{userInfo.nickName}}&avatarUrl={{userInfo.avatarUrl}}&content={{content}}" 
+        open-type="navigate" 
+        > 
+        <button
+        class="userinfo-nickname"
+        hover-class="name-hover">{{userInfo.nickName}}</button>   
+          
+          
+        </navigator>
+    </view>
+    
+    <view class="userinfo-introduction-wrapper">
+      <text class="userinfo-introduction" >{{content}}</text>
+    </view>
+  
+  
+  </view>
   </view>
 
-
-  <!-- 跳转到新的页面填写用户信息(新增页面记得要在 app.json 新增) -->
-  <view class="uploader">
-    <navigator url="./modifyUserInfo/modifyUserInfo?nickName={{userInfo.nickName}}&avatarUrl={{userInfo.avatarUrl}}&content={{content}}" open-type="navigate" class="uploader-text">
-      <text>修改用户信息</text>
-    </navigator>
-  </view>
 </view>
