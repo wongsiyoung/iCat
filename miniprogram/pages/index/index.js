@@ -72,7 +72,7 @@ Page({
     });
 
     //加载猫谱的第一列数据
-    var feed = util.getData2(); 
+    var feed = util.getData2(); //111111111111
     console.log("loaddata");
     var feed_data = feed.data;
     this.setData({

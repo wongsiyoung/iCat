@@ -44,34 +44,36 @@ Page({
               userInfo: {
                 nickName: res.result.nickName,
                 avatarUrl: res.result.avatarUrl
-              }
+              },
+              logged: true
             })
           }
+          else if ( res.result.modify == true ){
+            wx.cloud.downloadFile({
+              fileID: res.result.avatarUrl,
+              success: result => {
+                // get temp file path
+                console.log(result.tempFilePath)
+                that.setData({
+                  content: res.result.content,
+                  userInfo: {
+                    nickName: res.result.nickName,
+                    avatarUrl: result.result.avatarUrl
+                  },
+                  logged: true
+                })
+                console.log(that.data.avatarUrl)
+              },
+              fail: err => {
+                wx.showToast({
+                  title: '服务故障，请重试!',
+                  icon: 'loading',
+                  duration: 2000
+                })
+              }
+            })
+          } 
         }
-        else if ( res.result.modify == true ){
-          wx.cloud.downloadFile({
-            fileID: res.result.avatarUrl,
-            success: result => {
-              // get temp file path
-              console.log(result.tempFilePath)
-              that.setData({
-                content: res.result.content,
-                userInfo: {
-                  nickName: res.result.nickName,
-                  avatarUrl: result.result.avatarUrl
-                }
-              })
-              console.log(that.data.avatarUrl)
-            },
-            fail: err => {
-              wx.showToast({
-                title: '服务故障，请重试!',
-                icon: 'loading',
-                duration: 2000
-              })
-            }
-          })
-        } 
       },
       fail: err => {
         console.error('[云函数] [checkUser] 调用失败', err)
@@ -100,7 +102,8 @@ Page({
               userInfo: {
                 nickName: res.result.nickName,
                 avatarUrl: res.result.avatarUrl
-              }
+              },
+              logged: true
             })
           }
           else if ( res.result.modify == true ){
@@ -115,7 +118,8 @@ Page({
                   userInfo: {
                     nickName: res.result.nickName,
                     avatarUrl: result.tempFilePath
-                  }
+                  },
+                  logged: true
                 })
               },
 
