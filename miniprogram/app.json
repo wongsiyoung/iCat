@@ -4,7 +4,8 @@
     "pages/user/modifyUserInfo/modifyUserInfo",
     "pages/index/index",
     "pages/discovery/discovery",
-    "pages/educate/educate"
+    "pages/educate/educate",
+    "pages/entry/entry"
   ],
   "window": {
     "backgroundTextStyle": "light",
