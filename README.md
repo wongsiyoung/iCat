@@ -6,6 +6,10 @@
     |-- login 注册用户
     
     |-- update 更新用户信息
+
+    |-- catInfo 获取数据库猫的信息
+
+    |-- searchCat 按名字模糊搜索猫，获取数据库中匹配的猫的信息
     
 |--miniprogram 小程序端
 
