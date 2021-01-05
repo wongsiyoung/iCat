@@ -17,8 +17,8 @@ const cmd = db.command
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   openid = wxContext.OPENID
-  console.log('hello')
-  console.log(event.fieldName.length)
+  // console.log('hello')
+  // console.log(event.fieldName.length)
   for( let i = 0; i < event.fieldName.length; i++){
     try {
       console.log(event.fieldName[i])

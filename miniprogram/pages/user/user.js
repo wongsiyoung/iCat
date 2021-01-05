@@ -142,7 +142,19 @@ Page({
           duration: 2000
         })
       }
-    })    
+    })   
+    // wx.cloud.callFunction({
+    //   name: 'searchCat',
+    //   data: {
+    //     Name: 'j',
+    //   },
+    //   success: res => {
+    //     console.log(res)
+    //   },
+    //   fail: err => {
+    //     console.error('error',err)
+    //   }
+    // }) 
   },
 
   onGetUserInfo: function(e) {
