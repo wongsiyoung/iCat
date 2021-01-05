@@ -1,29 +1,84 @@
-.container{
-  height: 1500rpx;
+/** list.wxss **/
+
+.item-container {
+  margin: 10rpx 20rpx;
+  position: relative;
 }
+
+.cover {
+  width: 100%;
+  height: 400rpx;
+  display: block;
+}
+
+
+/* 大背景 */
+.desc {
+  margin: 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #F8BC9A;
+}
+
+.desc .left {
+}
+
+.desc .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right image{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+}
+
+/* .container{
+  height: 1500rpx;
+} */
 .container{
   padding: 0;
   font-size: 14rpx;
-  background: #DB7093;
+  background: #e7e3e4;
   color: #000;
+  height:300rpx;
+  justify-content: center;
 }
 
-.container .feed-item{
+/* .container .feed-item{
   width: 800rpx;
-
+  margin: 7rpx 0 6rpx 0;
+  padding: 30rpx 30rpx 20rpx;
   background: #DB7093;
-}
-.container .feed-item .feed-source{/*每一个栏*/
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+} */
+.container .feed-source{/*每一个栏*/
+  /* margin: 7rpx 0 6rpx 0;
+  padding: 30rpx 30rpx 20rpx; */
   width: 800rpx;
   left: 0;
   height: 300rpx;
   position: relative;
-}
-.container .feed-item .feed-source  image{/*每一个图*/
-  position: absolute;
-  display: inline-block;
-  width: 800rpx;
-  height: 300rpx;
+  /* border-radius: 45rpx;  */
   top: 0rpx;
-  
 }
+ .container .feed-source  image{
+  position: relative;
+  display: inline-block;
+  padding-left: 50rpx;
+  /* width: 800rpx;
+  height: 300rpx; */
+  width: 700rpx;
+  height: 250rpx;
+  top: 0rpx;
+  border-radius: 45rpx 45rpx 45rpx 45rpx; 
+  /*align-content: center*/
+} 
+

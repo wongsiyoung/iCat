@@ -1,21 +1,9 @@
 
-  <view class="container">
-    <view class="feed-item">
-            <view class="feed-source">        
-                    <image  src="../../images/educate1.jpg"></image>   
-           </view>
-            <view class="feed-source">        
-                    <image  src="../../images/educate2.jpg"></image>    
-            </view>
-            <view class="feed-source">        
-                    <image src="../../images/educate3.jpg"></image>    
-            </view>
-            <view class="feed-source">        
-                    <image  src="../../images/educate4.jpg"></image>    
-            </view>
-            <view class="feed-source">        
-                    <image  src="../../images/educate5.jpg"></image>    
-            </view>
-  </view>
-</view>
+<!-- <scroll-view scroll-y="true"> -->
+        <view wx:for="{{articles}}" wx:for-index="idx" class="container" bindtap="showDetail" id="{{idx}}">
+        <view class="feed-source">       
+         <image  src="{{item.meta.img_addr}}" ></image>  
+        </view>
 
+  </view>
+<!-- </scroll-view> -->

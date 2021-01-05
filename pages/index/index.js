@@ -69,14 +69,14 @@ Page({
       duration: 3000
     });
 
-    //加载猫谱的第一列数据
-    var feed = util.getData2(); 
-    console.log("loaddata");
-    var feed_data = feed.data;
-    this.setData({
-      feed:feed_data,
-      feed_length: feed_data.length
-    });
+    // //加载猫谱的第一列数据
+    // var feed = util.getData2(); 
+    // console.log("loaddata");
+    // var feed_data = feed.data;
+    // this.setData({
+    //   feed:feed_data,
+    //   feed_length: feed_data.length
+    // });
     setTimeout(function(){
       wx.showToast({
         title: '刷新成功',

@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/discovery/discovery",
     "pages/educate/educate",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/entry/entry"
   ],
   "window": {
     "backgroundTextStyle": "light",
