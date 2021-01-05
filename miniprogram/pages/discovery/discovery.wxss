@@ -40,8 +40,10 @@
   display: inline-block;
   width: 100rpx;
   height: 100rpx;
-  border-radius: 45rpx;/*圆角*/
-  /*top: 10rpx;*/
+  margin: 10rpx 0rpx 40rpx 40rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
   vertical-align: middle;/*把此元素放置在父元素的中部。*/
 }
 
@@ -49,7 +51,7 @@
   position: absolute;
   display: inline-block;
   font-size: 24rpx;
-  left: 120rpx;
+  left: 150rpx;
   top: 50rpx;
   width: 100rpx;
   height: 100rpx;
@@ -91,10 +93,10 @@
 .container .feed-item .feed-source .thumbsup image{/*点赞图标*/
   position: absolute;
   display: inline-block;
-  width: 60rpx;
-  height: 60rpx;
-  top: 530rpx;
-  left: 510rpx;
+  width: 50rpx;
+  height: 45rpx;
+  top: 540rpx;
+  left: 600rpx;
   vertical-align: middle;/*把此元素放置在父元素的中部。*/
 }
 
@@ -108,7 +110,7 @@
   width: 50rpx;
   height: 50rpx;
   top: 540rpx;
-  left: 585rpx;
+  left: 660rpx;
   vertical-align: middle;/*把此元素放置在父元素的中部。*/
 }
 

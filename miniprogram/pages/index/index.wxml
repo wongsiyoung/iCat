@@ -1,16 +1,26 @@
 <!--index.wxml-->
-<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<view class="container">
 
-    <!-- 搜索框 -->
-  <view class="search flex-wrp">
+<!-- 搜索框 -->
+<view class="search flex-wrp">
       <view class="search-left flex-item">
-          <image src="../../images/搜索.png"></image>
-          <input placeholder="喵~" placeholder-class="search-placeholder"/>
+          <image src="images/search.png"></image>
+          <input placeholder="喵~" placeholder-class="search-placeholder" bindconfirm="catSearch"/>
       </view>
       <view class="search-right flex-item" bindtap="upper">
-          <image src="../../images/猫粮.png"></image>
+          <image src="images/heart.png"></image>
       </view>
-  </view>
+</view>
+
+<scroll-view 
+    scroll-y="true" 
+    class="container" 
+    bindscrolltoupper="upper" 
+    upper-threshold="10" 
+    lower-threshold="5" 
+    bindscrolltolower="lower"  
+    scroll-into-view="{{toView}}" 
+    scroll-top="{{scrollTop}}">
 
     <!-- 猫信息 -->
     <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
@@ -19,17 +29,36 @@
                 <a class="" front-size:0>
                     <view class="avatar">
                         <image src="{{item.feed_source_img}}"></image>
+                    </view>  
+                    <view class="name-flex">
+                        <text class="cat-name">{{item.feed_source_name}}</text>
+                        <!-- wx:if="{{catGender == 1}}" -->
+                        <image  class="gender-image" src="images/gender-female.png"></image> 
+
+                        <image class="item-more" mode="aspectFit" bindtap = "bindItemTap" src="images/more.png"></image>   
                     </view>
-                    <text>姓名：{{item.feed_source_name}}
-                        品种：{{item.feed_source_type}}
-                        生日：{{item.feed_source_birth}}
-                        地址：{{item.feed_source_posi}}
-                        个性签名：{{item.feed_source_txt}}
-                    </text>
+                    <view class="cat-thing">
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/cat.png" ></image>
+                            <text>{{item.feed_source_type}}</text>
+                        </view>
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/birthday.png"></image>
+                            <text>{{item.feed_source_birth}}</text>
+                        </view>
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/address.png"></image>
+                            <text>{{item.feed_source_posi}}</text>
+                        </view>
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/bell.png"></image>
+                            <text>{{item.feed_source_txt}}</text>
+                        </view>
+                    </view>
                 </a>
-                <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>
+                
             </view>
         </view>
     </block>
 </scroll-view>
-
+</view>

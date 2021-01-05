@@ -185,4 +185,23 @@ Page({
       }
     })    
   },
+
+  toIntroduction: function() {
+    wx.navigateTo({
+      url: 'indroduce/introduce'
+    })
+  },
+
+  toAbout: function() {
+    wx.navigateTo({
+      url: 'about/about'
+    })
+  },
+
+  toMoney: function() {
+    wx.navigateTo({
+      url: 'money/money'
+    })
+  },
+
 })

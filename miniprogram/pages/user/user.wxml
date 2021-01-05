@@ -41,4 +41,19 @@
   </view>
   </view>
 
+  <view class="list">
+    <view class="icon-text">
+        <image class="icon-image" src="images/cat_help.png"></image>
+        <text class="about-iCat" bindtap="toAbout">反馈信息</text>
+    </view>
+    <view class="icon-text">
+        <image class="icon-image" src="images/app.png"></image>
+        <text class="about-iCat" bindtap="toIntroduction">关于iCat</text>
+    </view>
+    <view class="icon-text">
+        <image class="icon-image" src="images/cat_food_bag.png"></image>
+        <text class="about-iCat" bindtap="toMoney">打赏罐头</text>
+    </view>
+  </view>
+  <text class="title">美 好 你 的 猫 生 活</text>
 </view>

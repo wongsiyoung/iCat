@@ -1,5 +1,6 @@
 //index.js
 
+
 var util = require('../../utils/util.js')
 var app = getApp()
 Page({
@@ -7,19 +8,42 @@ Page({
     feed: [],
     feed_length: 0
   },
+
+  catSearch: function(e) {
+    wx.cloud.callFunction({
+      name:'catSearch',
+      data:{
+        value: [e.detail.value]
+      },
+      success: res => {
+        this.setData({
+          feed = res.result
+        })
+      },
+    fail:err => {
+      console.error('[云函数] [Search] 调用失败', err)
+        wx.showToast({
+          title: '服务故障，请重试!',
+          icon: 'loading',
+        })
+    },
+    complete: () => {
+      
+    }
+    })
+  },
+
+  
+
+
   //事件处理函数
+  //跳转到猫咪信息详情页面，还要传递猫咪的id
   bindItemTap: function() {
     wx.navigateTo({
-      url: '../answer/answer'
+      url: 'cat/cat'
     })
   },
-  bindQueTap: function() {
-    wx.navigateTo({
-      url: '../question/question'
-    })
-  },
-  /* 可删？ */
-  
+
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -38,18 +62,13 @@ Page({
     setTimeout(function(){wx.hideNavigationBarLoading();that.nextLoad();}, 1000);
     console.log("lower")
   },
-  //scroll: function (e) {
-  //  console.log("scroll")
-  //},
-
+ 
   //网络请求数据, 实现首页刷新
   refresh0: function(){
     var index_api = '';
     util.getData(index_api)
         .then(function(data){
-          //this.setData({
-          //
-          //});
+
           console.log(data);
         });
   },

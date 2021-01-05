@@ -58,13 +58,12 @@ page {
   border: rgba(0, 0, 0,0.1);
   border-style: solid;
   border-width: 0.1rpx;
-  border-radius:1em;
   background-color:#F3F3F3;
   margin-left: 80rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
   padding-left: 10rpx;
-  width: 400rpx;
+  width: 390rpx;
 }
 
 .input-mes-1{
@@ -73,6 +72,7 @@ page {
   width: 100%;
   margin-top: 30rpx;
   margin-left: 1rpx;
+  position: relative;
 }
 
 .introduction-title{
@@ -82,16 +82,16 @@ page {
 }
 .introduction-input{
   /*文字*/
-  font-size: 30rpx;
+  font-size: 35rpx;
   color: darkgrey;
   /*边框*/
   border: rgba(0, 0, 0,0.1);
   border-style: solid;
   border-width: 0.1rpx;
-  border-radius:1em;
   background-color:#F3F3F3;
   /*位置以及框大小*/
   margin-left: 20rpx;
   width: 400rpx;
   height: 400rpx;
+  vertical-align: top;
 }

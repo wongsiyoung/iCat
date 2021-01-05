@@ -1,7 +1,17 @@
-<scroll-view scroll-y="true" class="container feed-item" bindscrolltoupper="upper" upper-threshold="10"
-  lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<scroll-view 
+  scroll-y="true" 
+  class="container feed-item" 
+  bindscrolltoupper="upper" upper-threshold="10"
+  lower-threshold="5" 
+  bindscrolltolower="lower" 
+  scroll-into-view="{{toView}}" 
+  scroll-top="{{scrollTop}}">
 
-  <swiper class="activity" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+  <swiper 
+    class="activity" 
+    indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}"
     duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
@@ -20,19 +30,23 @@
           <text>{{item.usr_name}}</text>
         </a>
         <view class="focus">
-          <image src="../../images/加关注.png"></image>
+          <image src="images/follow.png"></image>
         </view>
         <view class="cat-img">
           <image src="{{item.cat_img}}"></image>
         </view>
         <view class="thumbsup">
-          <image src="../../images/点赞.png"></image>
+          
+          <view wx:if="{{like == 0}}">
+            <image src="{{like_image}}" catchtap="bindItemTap"></image>
+          </view>
+          <view wx:if="{{like == 1}}">
+            <image src="{{like_image}}" catchtap="bindItemTap"></image>
+          </view>
+          
         </view>
         <view class="comment">
-          <image src="../../images/评论.png"></image>
-        </view>
-        <view class="share">
-          <image src="../../images/分享.png"></image>
+          <image src="images/comment.png"></image>
         </view>
 
 

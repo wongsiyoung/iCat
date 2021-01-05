@@ -1,0 +1,3 @@
+<!--pages/user/about/about.wxml-->
+<text>添加微信联系我们！</text>
+<image src="/pages/user/images/bed_02.png"></image>
