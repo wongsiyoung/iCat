@@ -1,0 +1,17 @@
+/** item.wxss **/
+
+.container {
+  font-size: 26rpx;
+  /* 调整科普文字背景颜色 */
+  background: #e7e3e4;
+}
+
+.content {
+  padding: 10rpx;
+  border-bottom: 1px solid #E5E7ED;
+  border: 2px dashed #8d4a4a ;
+}
+
+.content .text {
+  line-height: 42rpx;
+}

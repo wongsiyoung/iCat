@@ -1,0 +1,23 @@
+<!--ModifyInfo.wxml-->
+<view class="container">
+
+<!-- 用户 openid -->
+<view class="userinfo">
+  <!-- 用户授权获取用户个人信息,用户为授权是点击才会弹出 -->
+  <button 
+    bindtap="updateAvatarUrl"
+    class="userinfo-avatar"
+    style="background-image: url({{userInfo.avatarUrl}})"
+    size="default"
+  ></button> 
+</view>
+<view  class="input-mes">
+  <text class="nickname-title">昵 称 : </text>
+<input class="nickname-input" placeholder="{{userInfo.nickName}}" confirm-type="done" bindinput="updateNickName"/>
+</view>
+<view  class="input-mes-1">
+  <text class="introduction-title">个性签名 : </text>
+<input class="introduction-input" placeholder="{{content}}" confirm-type="done" bindinput="updateContent"/>
+</view>
+<!-- <image src="{{userInfo.avatarUrl}}" mode="aspectFit"></image> -->
+</view>

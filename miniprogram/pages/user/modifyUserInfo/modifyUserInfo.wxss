@@ -1,0 +1,97 @@
+/**ModifyUserInfo.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.userinfo{
+  height: 280rpx;
+  width: 100%;
+  background: #FA8D6F;
+  border-left: none;
+  border-right: none;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color:#FA8D6F;
+  align-items:center;
+  margin-top: 100rpx;
+}
+
+.userinfo-avatar[size] {
+  width: 150rpx;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+.input-mes{
+  /*水平*/
+  display: flex;
+  flex-direction: row;
+  /*位置*/
+  width: 100%;
+  margin-top: 30rpx;
+  align-items: center;
+}
+
+.nickname-title{
+  /*字体*/
+  font-size: 35rpx;
+  color: #FA8D6F;
+  /*位置*/
+  margin-left: 80rpx;
+}
+.nickname-input {
+  font-size: 35rpx;
+  color: darkgrey;
+  border: rgba(0, 0, 0,0.1);
+  border-style: solid;
+  border-width: 0.1rpx;
+  border-radius:1em;
+  background-color:#F3F3F3;
+  margin-left: 80rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 10rpx;
+  width: 400rpx;
+}
+
+.input-mes-1{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 30rpx;
+  margin-left: 1rpx;
+}
+
+.introduction-title{
+  font-size: 35rpx;
+  color: #FA8D6F;
+  margin-left: 80rpx;
+}
+.introduction-input{
+  /*文字*/
+  font-size: 30rpx;
+  color: darkgrey;
+  /*边框*/
+  border: rgba(0, 0, 0,0.1);
+  border-style: solid;
+  border-width: 0.1rpx;
+  border-radius:1em;
+  background-color:#F3F3F3;
+  /*位置以及框大小*/
+  margin-left: 20rpx;
+  width: 400rpx;
+  height: 400rpx;
+}

@@ -1,0 +1,9 @@
+
+<!-- <scroll-view scroll-y="true"> -->
+        <view wx:for="{{articles}}" wx:for-index="idx" class="container" bindtap="showDetail" id="{{idx}}">
+        <view class="feed-source">       
+         <image  src="{{item.meta.img_addr}}" ></image>  
+        </view>
+
+  </view>
+<!-- </scroll-view> -->

@@ -1,0 +1,94 @@
+/**index.wxss**/
+
+.container{
+  height: 1500rpx;
+}
+.container .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #FFC0CB;
+}
+.container .search-left{
+  flex: 8;
+  background: #F8F8FF;
+  text-align: left;
+}
+.container .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: #DB7093;
+  line-height: 20rpx;
+}
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  background: #DB7093;
+  color: #000;
+}
+
+.container .feed-item{
+  width: 690rpx;
+  padding: 30rpx 30rpx 20rpx;
+  margin: 7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+.container .feed-item .feed-source{/*每一个猫栏*/
+  width: 690rpx;
+  left: 0;
+  height: 300rpx;
+}
+.container .feed-item .feed-source .avatar{
+  position: relative;
+  display: inline-block;
+}
+.container .feed-item .feed-source a{
+  display: inline-block;
+  /*height: 40rpx;*/
+}
+.container .feed-item .feed-source .avatar image{/*每一个猫图*/
+  /*position: absolute;*/
+  display: inline-block;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 45rpx;/*圆角*/
+  /*top: 10rpx;*/
+  vertical-align: middle;/*把此元素放置在父元素的中部。*/
+}
+.container .feed-item .feed-source text{/*每一个猫文字介绍*/
+  position: absolute;
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 0 15rpx;
+  color:#DB7093;
+  font-size: 26rpx;
+}
+.container .feed-item .feed-source .item-more{/*更多按钮，待加入button组件*/
+  display: inline-block;
+  width: 55rpx;
+  height: 55rpx;
+  float: right;
+}
