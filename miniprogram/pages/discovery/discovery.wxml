@@ -34,17 +34,7 @@
         <view class="share">
           <image src="../../images/分享.png"></image>
         </view>
-
-
-
-
       </view>
-
-
-
-
     </view>
   </block>
-
-
 </scroll-view>

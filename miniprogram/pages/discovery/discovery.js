@@ -20,22 +20,7 @@ Page({
     //调用应用实例的方法获取全局数据
     this.refresh();
   },
-  switchTab: function(e){
-    this.setData({
-      currentNavtab: e.currentTarget.dataset.idx
-    });
-  },
 
-  bindItemTap: function() {
-    wx.navigateTo({
-      url: '../answer/answer'
-    })
-  },
-  bindQueTap: function() {
-    wx.navigateTo({
-      url: '../question/question'
-    })
-  },
   upper: function () {
     wx.showNavigationBarLoading()
     this.refresh();
@@ -48,22 +33,6 @@ Page({
     setTimeout(function(){wx.hideNavigationBarLoading();that.nextLoad();}, 1000);
     console.log("lower")
   },
-  //scroll: function (e) {
-  //  console.log("scroll")
-  //},
-
-  //网络请求数据, 实现刷新
-  refresh0: function(){
-    var index_api = '';
-    util.getData(index_api)
-        .then(function(data){
-          //this.setData({
-          //
-          //});
-          console.log(data);
-        });
-  },
-
   //使用本地 fake 数据实现刷新效果
   refresh: function(){
     var feed = util.getDiscovery();
@@ -86,3 +55,20 @@ Page({
     });
   }
 });
+
+
+  //scroll: function (e) {
+  //  console.log("scroll")
+  //},
+
+  // //网络请求数据, 实现刷新
+  // refresh0: function(){
+  //   var index_api = '';
+  //   util.getData(index_api)
+  //       .then(function(data){
+  //         //this.setData({
+  //         //
+  //         //});
+  //         console.log(data);
+  //       });
+  // },
