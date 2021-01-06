@@ -1,20 +1,13 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/user/user",
     "pages/user/modifyUserInfo/modifyUserInfo",
     "pages/user/indroduce/introduce",
     "pages/user/about/about",
     "pages/user/money/money",
-
-
     "pages/discovery/discovery",
-    
-    "pages/index/index",
     "pages/index/cat/cat",
-
-    
-    
-    
     "pages/educate/educate"
   ],
   "window": {

@@ -23,40 +23,48 @@
     scroll-top="{{scrollTop}}">
 
     <!-- 猫信息 -->
-    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <block wx:for="{{info}}" wx:for-index="idx" wx:for-item="item">
         <view class="feed-item">
             <view class="feed-source">
                 <a class="" front-size:0>
                     <view class="avatar">
-                        <image src="{{item.feed_source_img}}"></image>
+                        <!-- 加载猫咪图片 -->
+                        <image src="{{item.catImage}}"></image>
                     </view>  
                     <view class="name-flex">
-                        <text class="cat-name">{{item.feed_source_name}}</text>
-                        <!-- wx:if="{{catGender == 1}}" -->
-                        <image  class="gender-image" src="images/gender-female.png"></image> 
+                        <!-- 加载猫咪姓名 -->
+                        <text class="cat-name">{{item.catName}}</text>
 
+                        <!-- 加载猫咪性别 -->
+                        <view wx:if="{{item.catGender == 'F'}}">
+                            <image  class="gender-image" src="images/gender-female.png"></image> 
+                        </view>
+                        <view wx:if="{{item.catGender == 'M'}}">
+                            <image  class="gender-image" src="images/gender-male.png"></image> 
+                        </view>
+                        <!-- 加载更多按钮，并且点击可跳转到详情页面 -->
                         <image class="item-more" mode="aspectFit" bindtap = "bindItemTap" src="images/more.png"></image>   
                     </view>
+
                     <view class="cat-thing">
                         <view class="icon-text">
                             <image class="icon-image" src="images/cat.png" ></image>
-                            <text>{{item.feed_source_type}}</text>
+                            <text>{{item.catBreed}}</text>
                         </view>
                         <view class="icon-text">
                             <image class="icon-image" src="images/birthday.png"></image>
-                            <text>{{item.feed_source_birth}}</text>
+                            <text>{{item.catBirth}}</text>
                         </view>
                         <view class="icon-text">
                             <image class="icon-image" src="images/address.png"></image>
-                            <text>{{item.feed_source_posi}}</text>
+                            <text>{{item.catAddr}}</text>
                         </view>
                         <view class="icon-text">
                             <image class="icon-image" src="images/bell.png"></image>
-                            <text>{{item.feed_source_txt}}</text>
+                            <text> {{item.catTemperament}}</text>
                         </view>
                     </view>
                 </a>
-                
             </view>
         </view>
     </block>
