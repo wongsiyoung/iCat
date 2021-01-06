@@ -144,9 +144,9 @@ Page({
       }
     })   
     // wx.cloud.callFunction({
-    //   name: 'searchCat',
+    //   name: 'articleInfo',
     //   data: {
-    //     Name: 'j',
+    //     id: 1,
     //   },
     //   success: res => {
     //     console.log(res)

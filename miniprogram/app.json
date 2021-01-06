@@ -5,7 +5,7 @@
     "pages/index/index",
     "pages/discovery/discovery",
     "pages/educate/educate",
-    "pages/entry/entry"
+    "pages/educate/entry/entry"
   ],
   "window": {
     "backgroundTextStyle": "light",

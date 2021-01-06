@@ -27,19 +27,35 @@ Page({
   // 加载日记
   getArticle(params) {
     console.log("Loading diary data...", params);
-
+    let that = this
     var id = params["id"], diary;
-    app.getArticleList(list => {
-      if (typeof id === 'undefined') {
-        diary = list[0];
-      } else {
-        diary = list[id];
+    // app.getArticleList(list => {
+    //   if (typeof id === 'undefined') {
+    //     diary = list[0];
+    //   } else {
+    //     diary = list[id];
+    //   }
+    // });
+    // console.log("hello")
+    // console.log(id)
+    wx.cloud.callFunction({
+      name: 'articleInfo',
+      data: {
+        id: id,
+      },
+      success: res => {
+        // console.log("hello")
+        // console.log(res)  
+        diary = res.result
+        // console.log(diary)
+        that.setData({
+          diary: diary,
+        });
+      },
+      fail: err => {
+        console.error('error',err)
       }
-    });
-
-    this.setData({
-      diary: diary,
-    });
+    }) 
   },
 
   // 过滤出预览图片列表

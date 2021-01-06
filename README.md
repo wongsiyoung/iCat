@@ -10,6 +10,8 @@
     |-- catInfo 获取数据库猫的信息
 
     |-- searchCat 按名字模糊搜索猫，获取数据库中匹配的猫的信息
+
+    |-- articleInfo 获取数据库中科普文章的信息
     
 |--miniprogram 小程序端
 

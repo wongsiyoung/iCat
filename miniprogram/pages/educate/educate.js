@@ -30,7 +30,7 @@ Page({
 
   showDetail(event) {
     wx.navigateTo({
-      url: '../entry/entry?id=' + event.currentTarget.id,
+      url: './entry/entry?id=' + event.currentTarget.id,
     });
   }
 
