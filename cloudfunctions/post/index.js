@@ -32,7 +32,8 @@ exports.main = async (event, context) => {
         openID: wxContext.OPENID,
         postID: postResult.data[0].postID + 1,
         content: event.content,
-        image: event.image
+        image: event.image,
+        time: event.time
       }
     })
   } catch(e) {

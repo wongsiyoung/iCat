@@ -30,6 +30,7 @@ exports.main = async (event, context) => {
 
     const postResult = await post
     .orderBy('time', 'desc')  // 按时间降序，获取最新时间发表文章
+    .limit(10)
     .get()
     .then(console.log)
     .catch(console.error)

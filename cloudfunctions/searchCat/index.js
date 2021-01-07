@@ -15,11 +15,11 @@ const cmd = db.command
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   console.log(event.Name)
-  // 查询用户是否已存在数据库中
+  
   const result = await UsersCollection.where({
     catName: db.RegExp({
-      regexp: event.Name,
-      options: 'i',
+      regexp: event.Name, // 模糊匹配输入的名字
+      options: 'i',       // 大小写不敏感
     })
   })
   .get({

@@ -43,7 +43,8 @@
                             <image  class="gender-image" src="images/gender-male.png"></image> 
                         </view>
                         <!-- 加载更多按钮，并且点击可跳转到详情页面 -->
-                        <image class="item-more" mode="aspectFit" bindtap = "bindItemTap" src="images/more.png"></image>   
+                        <!-- <image class="item-more" mode="aspectFit" bindtap = "bindItemTap" src="images/more.png"></image>    -->
+                         <image class="item-more" mode="aspectFit" src="images/more.png"></image>   
                     </view>
 
                     <view class="cat-thing">
