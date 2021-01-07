@@ -1,0 +1,16 @@
+<!-- 单条内容 -->
+<template name="content-item">
+  <block wx:if="{{content.type == 'TEXT'}}">
+    <view style="margin-top:10rpx" >
+      <text  wx:if="{{content.type == 'TEXT'}}" class="text">{{content.content}}</text>
+    </view>
+  </block>
+</template>
+
+<view class="container">
+  <!--正文-->
+  <view wx:for="{{diary.list}}" wx:for-item="content" class="content">
+    <template is="content-item" data="{{content}}"></template>
+  </view>
+
+</view>

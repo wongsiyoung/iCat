@@ -4,7 +4,8 @@ const cloud = require('wx-server-sdk')
 // 初始化 cloud
 cloud.init({
   // API 调用都保持和云函数当前所在环境一致
-  env: cloud.DYNAMIC_CURRENT_ENV,
+  env: 'icat-7g0bjdvib8644e86',
+  traceUser: true,
   throwOnNotFound: false  // 如果获取不到记录，不抛出异常，而是返回空
 })
 

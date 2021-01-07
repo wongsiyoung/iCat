@@ -1,4 +1,4 @@
-// pages/chooseLib/chooseLib.js
+// pages/user/money/money.js
 Page({
 
   /**

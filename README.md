@@ -10,6 +10,8 @@
     |-- catInfo 获取数据库猫的信息
 
     |-- searchCat 按名字模糊搜索猫，获取数据库中匹配的猫的信息
+
+    |-- articleInfo 获取数据库中科普文章的信息
     
 |--miniprogram 小程序端
 
@@ -18,8 +20,6 @@
     |-- image 静态页面图像
 
     |-- pages 小程序页面
-    
-        |-- chooseLib 版本提示页面
 
         |-- user 小程序首页，显示个人用户信息
         
@@ -28,6 +28,8 @@
         |-- discovery 喵圈页面
 
         |-- educate 科普页面
+
+            |-- entry 科普文章详情内容页面
 
         |-- index 猫谱页面
     

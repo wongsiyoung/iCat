@@ -12,7 +12,9 @@ Page({
     interval: 5000,
     duration: 1000,
     feed: [],
-    feed_length: 0
+    feed_length: 0,
+    like_image: "images/like.png",
+    like:0
   },
   onLoad: function () {
     console.log('onLoad')
@@ -27,9 +29,16 @@ Page({
   },
 
   bindItemTap: function() {
-    wx.navigateTo({
-      url: '../answer/answer'
-    })
+    if(!this.like){
+    this.setData({
+      like:1,
+      like_image:"images/liked.png"
+    })}
+    else{
+      this.setData({
+        like:0,
+        like_image:"images/like.png"
+      })}
   },
   bindQueTap: function() {
     wx.navigateTo({

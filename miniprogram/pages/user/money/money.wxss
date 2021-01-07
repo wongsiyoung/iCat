@@ -1,0 +1,5 @@
+/* pages/user/money/money.wxss */
+.text{
+  font: 100;
+  align-items: center;
+}

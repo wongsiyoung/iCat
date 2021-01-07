@@ -3,9 +3,13 @@
     "pages/user/user",
     "pages/user/modifyUserInfo/modifyUserInfo",
     "pages/index/index",
+    "pages/index/cat/cat",
+    "pages/user/indroduce/introduce",
+    "pages/user/about/about",
+    "pages/user/money/money",
     "pages/discovery/discovery",
     "pages/educate/educate",
-    "pages/entry/entry"
+    "pages/educate/entry/entry"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,33 +20,33 @@
   },
   "tabBar": {
     "color": "#626567",
-    "selectedColor": "#F89B9B",
+    "selectedColor": "#FA8D6F",
     "backgroundColor": "#FBFBFB",
     "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "猫谱",
-        "iconPath": "images/猫谱.png",
-        "selectedIconPath": "images/猫爪.png"
+        "iconPath": "images/tabBar/cat.png",
+        "selectedIconPath": "images/tabBar/cat-select.png"
       },
       {
         "pagePath": "pages/discovery/discovery",
         "text": "喵圈",
-        "iconPath": "images/猫圈.png",
-        "selectedIconPath": "images/猫爪.png"
+        "iconPath": "images/tabBar/planet.png",
+        "selectedIconPath": "images/tabBar/planet-select.png"
       },
       {
         "pagePath": "pages/educate/educate",
         "text": "科普",
-        "iconPath": "images/科普.png",
-        "selectedIconPath": "images/猫爪.png"
+        "iconPath": "images/tabBar/poster.png",
+        "selectedIconPath": "images/tabBar/poster-select.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "用户",
-        "iconPath": "images/用户.png",
-        "selectedIconPath": "images/猫爪.png"
+        "iconPath": "images/tabBar/bone.png",
+        "selectedIconPath": "images/tabBar/bone-select.png"
       }
     ]
   },
