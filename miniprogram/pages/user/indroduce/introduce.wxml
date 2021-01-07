@@ -1,0 +1,4 @@
+<!--pages/user/indroduce/introduce.wxml-->
+
+<text>开发人员：黄思蓉  胡邱诗雨  杨净涵</text>
+<image src="/pages/user/images/bed_02.png"></image>

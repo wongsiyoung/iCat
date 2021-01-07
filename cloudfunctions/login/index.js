@@ -8,7 +8,6 @@ cloud.init({
   // API 调用都保持和云函数当前所在环境一致
   env: 'icat-7g0bjdvib8644e86',
   traceUser: true,
-  throwOnNotFound: false  // 如果获取不到记录，不抛出异常，而是返回空
 })
 
 // 连接数据库
@@ -23,7 +22,7 @@ exports.main = async (event, context) => {
   // 获取 WX Context (微信调用上下文)，包括 OPENID、APPID、及 UNIONID（需满足 UNIONID 获取条件）等信息
   const wxContext = cloud.getWXContext()
   openid = wxContext.OPENID
-
+  console.log(event.nickName)
   // 新增用户记录
   try {
     return await UsersCollection.add({
@@ -42,6 +41,5 @@ exports.main = async (event, context) => {
       status_code: 500,
       errMsg: e
     }
-  }
+   }
 }
-

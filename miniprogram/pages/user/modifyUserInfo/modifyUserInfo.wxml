@@ -13,11 +13,11 @@
 </view>
 <view  class="input-mes">
   <text class="nickname-title">昵 称 : </text>
-<input class="nickname-input" placeholder="{{userInfo.nickName}}" confirm-type="done" bindinput="updateNickName"/>
+<input class="nickname-input" placeholder="{{userInfo.nickName}}" confirm-type="done" bindconfirm="updateNickName"/>
 </view>
 <view  class="input-mes-1">
   <text class="introduction-title">个性签名 : </text>
-<input class="introduction-input" placeholder="{{content}}" confirm-type="done" bindinput="updateContent"/>
+<textarea class="introduction-input" placeholder="{{content}}" focus="true" confirm-type="done" selection-start="10" selection-end="20" bindconfirm="updateContent" />
 </view>
 <!-- <image src="{{userInfo.avatarUrl}}" mode="aspectFit"></image> -->
 </view>

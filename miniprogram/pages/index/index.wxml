@@ -1,32 +1,72 @@
 <!--index.wxml-->
-<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-  <view class="search flex-wrp">
+<view class="container">
+
+<!-- 搜索框 -->
+<view class="search flex-wrp">
       <view class="search-left flex-item">
-          <image src="../../images/搜索.png"></image>
-          <input placeholder="喵~" placeholder-class="search-placeholder"/>
+          <image src="images/search.png"></image>
+          <input placeholder="喵~" placeholder-class="search-placeholder" bindconfirm="catSearch"/>
       </view>
       <view class="search-right flex-item" bindtap="upper">
-          <image src="../../images/猫粮.png"></image>
+          <image src="images/heart.png"></image>
       </view>
-  </view>
+</view>
 
-    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+<scroll-view 
+    scroll-y="true" 
+    class="container" 
+    bindscrolltoupper="upper" 
+    upper-threshold="10" 
+    lower-threshold="5" 
+    bindscrolltolower="lower"  
+    scroll-into-view="{{toView}}" 
+    scroll-top="{{scrollTop}}">
+
+    <!-- 猫信息 -->
+    <block wx:for="{{info}}" wx:for-index="idx" wx:for-item="item">
         <view class="feed-item">
             <view class="feed-source">
                 <a class="" front-size:0>
                     <view class="avatar">
-                        <image src="{{item.feed_source_img}}"></image>
+                        <!-- 加载猫咪图片 -->
+                        <image src="{{item.catImage}}"></image>
+                    </view>  
+                    <view class="name-flex">
+                        <!-- 加载猫咪姓名 -->
+                        <text class="cat-name">{{item.catName}}</text>
+
+                        <!-- 加载猫咪性别 -->
+                        <view wx:if="{{item.catGender == 'F'}}">
+                            <image  class="gender-image" src="images/gender-female.png"></image> 
+                        </view>
+                        <view wx:if="{{item.catGender == 'M'}}">
+                            <image  class="gender-image" src="images/gender-male.png"></image> 
+                        </view>
+                        <!-- 加载更多按钮，并且点击可跳转到详情页面 -->
+                        <image class="item-more" mode="aspectFit" bindtap = "bindItemTap" src="images/more.png"></image>   
                     </view>
-                    <text>姓名：{{item.feed_source_name}}
-                        品种：{{item.feed_source_type}}
-                        生日：{{item.feed_source_birth}}
-                        地址：{{item.feed_source_posi}}
-                        个性签名：{{item.feed_source_txt}}
-                    </text>
+
+                    <view class="cat-thing">
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/cat.png" ></image>
+                            <text>{{item.catBreed}}</text>
+                        </view>
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/birthday.png"></image>
+                            <text>{{item.catBirth}}</text>
+                        </view>
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/address.png"></image>
+                            <text>{{item.catAddr}}</text>
+                        </view>
+                        <view class="icon-text">
+                            <image class="icon-image" src="images/bell.png"></image>
+                            <text> {{item.catTemperament}}</text>
+                        </view>
+                    </view>
                 </a>
-                <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>
             </view>
         </view>
     </block>
 </scroll-view>
-
+</view>

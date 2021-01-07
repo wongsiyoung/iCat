@@ -171,6 +171,8 @@ Page({
       返回参数:  1.注册成功: status_code 200, errMsg 错误说明
                 2.注册失败: status_code 500, errMsg 错误说明
     */
+   console.log("hello")
+   console.log(e.detail)
     wx.cloud.callFunction({
       name: 'login',
       data: {
@@ -197,4 +199,23 @@ Page({
       }
     })    
   },
+
+  toIntroduction: function() {
+    wx.navigateTo({
+      url: 'indroduce/introduce'
+    })
+  },
+
+  toAbout: function() {
+    wx.navigateTo({
+      url: 'about/about'
+    })
+  },
+
+  toMoney: function() {
+    wx.navigateTo({
+      url: 'money/money'
+    })
+  },
+
 })
