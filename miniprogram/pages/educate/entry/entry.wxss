@@ -1,15 +1,15 @@
 /** item.wxss **/
 
 .container {
-  font-size: 26rpx;
+  font-size: 30rpx;
   /* 调整科普文字背景颜色 */
-  background: #e7e3e4;
+  background: #F0F4F3;
 }
 
 .content {
   padding: 10rpx;
   border-bottom: 1px solid #E5E7ED;
-  border: 2px dashed #8d4a4a ;
+  border: 2px dashed #F8BC9A;
 }
 
 .content .text {

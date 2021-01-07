@@ -1,4 +1,11 @@
 <!--pages/user/indroduce/introduce.wxml-->
-
-<text>开发人员：黄思蓉  胡邱诗雨  杨净涵</text>
-<image src="/pages/user/images/bed_02.png"></image>
+<view class="container">
+  <view class="icon">
+      <image class="image" src="/pages/user/images/app.png"></image>
+      <text class="title">开发人员：</text>
+  </view>
+  <text class="text">黄思蓉 : 后端 数据库设计</text>
+  <text class="text">胡邱诗雨 ：前端 UI设计</text>
+  <text class="text">杨净涵：前端 UI设计</text>
+  <!-- <image class="image" src="/pages/user/images/app.png"></image> -->
+</view>

@@ -1,1 +1,41 @@
 /* pages/user/indroduce/introduce.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container{
+  font-size: 50rpx;
+}
+
+.text{
+  width: 100%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  padding-left: 50rpx;
+  border: 1px solid;
+  border-color: #f8BC9A;
+}
+
+.image{
+  /* margin-right: 40rpx; */
+  /* padding-top: 40rpx; */
+  width: 60rpx;
+  height: 60rpx;
+  /* border: 1px solid;
+  border-color: #f8BC9A; */
+  /* padding: 10rpx 30rpx 10rpx 30rpx;
+  margin: 10rpx 0rpx 0rpx 0rpx; */
+}
+.icon{
+  width: 100%;
+  flex-direction: row;
+  border: 1px solid;
+  border-color: #f8BC9A;
+}
+
+.title{
+  /* border: 1px solid;
+  border-color: #f8BC9A; */
+}
